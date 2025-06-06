@@ -1,0 +1,28 @@
+---
+name: "Manage label action"
+description: "Adds or removes a label from issues and PRs"
+
+inputs:
+  github_token:
+    description: A GitHub token to execute the action with
+    required: false
+    default: ${{ github.token }}
+  number:
+    description: The issue or PR number
+    required: false
+  repo:
+    description: The owner and repository name
+    required: false
+    default: ${{ github.repository }}
+  add:
+    description: The labels that should be added, comma separated
+    required: false
+    default: ""
+  remove:
+    description: The labels that should be removed, comma separated
+    required: false
+    default: ""
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
