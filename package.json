@@ -1,0 +1,31 @@
+{
+  "name": "label-action",
+  "version": "1.0.0",
+  "description": "Adds or removes a label from issues and PRs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && ncc build lib/index.js -o dist",
+    "test": "echo \"No tests yet\"",
+    "clean": "rm -rf dist lib",
+    "prebuild": "yarn clean"
+  },
+  "keywords": [
+    "gitea",
+    "github-actions",
+    "label",
+    "pull-request"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.11.0",
+    "@actions/github": "^6.0.1",
+    "@octokit/rest": "^20.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vercel/ncc": "^0.38.0",
+    "typescript": "^5.0.0"
+  }
+}
