@@ -13,7 +13,8 @@ module.exports = {
       "@semantic-release/exec",
       {
         prepareCmd:
-          "yarn install --frozen-lockfile && yarn build && node ./scripts/update-readme-version.js ${nextRelease.version}",
+          "yarn install --frozen-lockfile && yarn build && " +
+          "sed -i -e 's|alessandrozanatta/label-action@v.*|alessandrozanatta/label-action@v${nextRelease.version}|g' README.md",
       },
     ],
     ["@semantic-release/npm"],
