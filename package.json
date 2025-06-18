@@ -1,6 +1,6 @@
 {
   "name": "label-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds or removes a label from issues and PRs",
   "private": true,
   "main": "dist/index.js",

@@ -13,7 +13,7 @@ on:
 
 jobs:
   steps:
-    - uses: alessandrozanatta/label-action@v1.0.0
+    - uses: alessandrozanatta/label-action@v1.0.1
       with:
         add: test
         remove: deleteme
